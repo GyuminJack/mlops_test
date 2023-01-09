@@ -70,5 +70,5 @@ if __name__ == "__main__":
     ctr_model = CtrPredictionModel(n_user, n_item)
 
     # training
-    trainer = pl.Trainer(max_epochs=10, auto_select_gpus=True, log_every_n_steps=5)
+    trainer = pl.Trainer(max_epochs=10, auto_select_gpus=True, log_every_n_steps=50)
     trainer.fit(ctr_model, train_loader, val_loader)
